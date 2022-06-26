@@ -22,7 +22,7 @@ html {
 body {
   background-color: #faf2f0;
   font-size: 1.8rem;
-  padding: 2rem 4rem;
+  padding: 2rem 4rem 0;
 }
 p {
   color: var(--color-typo-secondary);
@@ -38,6 +38,14 @@ h5 {
   margin-bottom: 1rem;
 }
 
+img.full-stack {
+  position: absolute;
+  right: 23.5%;
+  top: 9rem;
+  height: 15rem;
+}
+
+/* header starts here */
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,6 +54,13 @@ h5 {
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
+}
+.dev {
+  transition: all 0.3s ease-in;
+}
+.logo:hover span.dev {
+  color: var(--color-typo-tertiary);
+  cursor: pointer;
 }
 
 .header::after {
@@ -68,6 +83,7 @@ h5 {
   text-decoration: none;
   padding-inline: 1rem;
   font-weight: 100;
+  transition: all 0.3s ease-out;
 }
 
 .nav ul li a {
@@ -75,28 +91,31 @@ h5 {
   color: #0d1829;
 }
 
-.nav ul li a:hover {
-  color: #3867b1;
+.nav ul li:hover {
+  transform: scale(1.2);
 }
+.nav ul li:hover a:hover {
+  color: var(--color-typo-tertiary);
+  font-weight: 300;
+  transform: scale(1.2);
+}
+/* header ends here */
 
+/* main starts */
 .main {
-  /* border: 1px solid red; */
   margin: 0 auto;
   max-width: 90%;
   max-height: 45rem;
   margin-block: 5rem;
+  padding: 1rem;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1.5rem 1rem;
 }
 
-.main {
-  padding: 1rem;
-}
 .item {
   height: 100%;
-  /* border: 2px solid green; */
 }
 .item:nth-child(1) {
   grid-row: 1;
@@ -116,8 +135,8 @@ h5 {
 }
 .item__photo .img {
   width: 80%;
-  /* border: 1px solid red; */
-  height: inherit;
+  height: 85%;
+  margin-top: 5rem;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -149,4 +168,42 @@ span.frontend {
   color: var(--color-typo-tertiary);
   font-weight: 300;
   font-weight: bolder;
+}
+/* main ends here ============> */
+/* ================ pages ============= */
+.acad,
+.skills,
+.contact {
+  max-width: 80rem;
+  margin: 25vh auto 0;
+  padding: 3rem 5rem;
+  overflow: hidden;
+  background-color: var(--color-bg-seconday);
+  letter-spacing: 2px;
+}
+.acad > p {
+  color: var(--color-typo-primary);
+}
+span.change-color {
+  color: var(--color-typo-tertiary);
+  font-weight: 300;
+}
+
+.skills > h5 {
+  color: var(--color-typo-tertiary);
+}
+
+/* contacts me =========> */
+.contact-flex {
+  display: flex;
+  max-width: 60%;
+  justify-content: space-around;
+  justify-content: baseline;
+}
+.contact-flex a:first-child {
+  width: 10rem;
+}
+.contact-flex a:last-child {
+  align-self: center;
+  width: 7.5rem;
 }
