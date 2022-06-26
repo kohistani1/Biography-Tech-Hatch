@@ -1,9 +1,4 @@
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+Box sizing rules
 
 /* Remove default margin */
 body,
@@ -32,9 +27,9 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+
 }
 
 /* A elements that don't have a class get default styles */
@@ -43,11 +38,7 @@ body {
 } */
 
 /* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
+
 
 /* Inherit fonts for inputs and buttons */
 input,
